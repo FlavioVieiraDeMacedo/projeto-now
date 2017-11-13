@@ -1,0 +1,17 @@
+﻿@model FormularioNOW.Models.NOW
+@{
+    ViewBag.Title = "GerarNOW";
+}
+
+<h2>GerarNOW</h2>
+
+@using (@Html.BeginForm())
+{
+    @Html.LabelFor(a => a.Nome);
+    @Html.TextBoxFor(a => a.Nome);
+    <br />
+    @Html.LabelFor(a => a.Descricao);
+    @Html.TextBoxFor(a => a.Descricao);
+
+    <button type="submit">Enviar</button>
+}

@@ -1,0 +1,21 @@
+﻿@model List<FormularioNOW.Models.NOW>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<table class="table">
+    <tr>
+        <th>Nome</th>
+        <th>Descrição</th>
+        <th></th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Nome</td>
+            <td>@item.Descricao</td>
+            <td><div style="font-size:30px">@Html.ActionLink(" ", "TiNOW", new { Id_Now = @item.ID_now }, new { @class = "fa fa-pencil-square fa-2",Style = "text-decoration: none;" })</div></td>
+        </tr>
+    }
+</table>

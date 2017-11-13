@@ -1,0 +1,42 @@
+﻿@using FormularioNOW.Models
+@model LoginViewModel
+@{
+    ViewBag.Title = "Log in";
+}
+
+<br />
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6 col-md-4 col-md-offset-4">
+            <div class="account-wall">
+                <img class="profile-img" src="https://www.iot-now.com/wp-content/uploads/2012/09/giesecke-and-devrient1.jpg"
+                     alt="">
+@using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-signin", role = "form" }))
+{
+                    @Html.TextBoxFor(m => m.Email, new { @class = "form-control", placeholder = "Email" })
+
+                    @Html.PasswordFor(m => m.Password, new { @class = "form-control", placeholder = "Senha" })
+
+                    <button class="btn btn-lg btn-primary btn-block" type="submit" value="Log in">
+                        Sign in
+                    </button>
+                    <label class="checkbox pull-left">
+                        @Html.CheckBoxFor(m => m.RememberMe)
+                        @Html.LabelFor(m => m.RememberMe)
+                    </label>
+                    <a href="#" class="pull-right need-help">Need help? </a><span class="clearfix"></span>
+                    <br />
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+}
+            </div>
+            @Html.ActionLink("Register as a new user", "Register",new {@class= "text-center new-account" })
+        </div>
+
+    </div>
+</div>
+<br />
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

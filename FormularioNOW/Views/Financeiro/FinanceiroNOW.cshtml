@@ -1,0 +1,67 @@
+﻿@model FormularioNOW.Models.NOW
+@{
+    ViewBag.Title = "FinanceiroNOW";
+}
+
+<h2>FinanceiroNOW</h2>
+
+    Nome: @Model.Nome
+    Descrição: @Model.Descricao
+
+    <div class="container">
+        <h2>Engenharia</h2>
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <p>@Model.Engenharia</p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <h2>TI</h2>
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <p>@Model.TI</p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <h2>Compras</h2>
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <p>@Model.Compras</p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <h2>Qualidade</h2>
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <p>@Model.Qualidade</p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <h2>Prod. Soft</h2>
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <p>@Model.ProdSoft</p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <h2>Produtos</h2>
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <p>@Model.Produto</p>
+            </div>
+        </div>
+    </div>
+    
+    
+    @using (@Html.BeginForm())
+    {
+        <p>Perguntas especificas para Compras</p>
+        @Html.TextBoxFor(a => a.Compras);
+
+        <button type="submit">Enviar</button>
+    }

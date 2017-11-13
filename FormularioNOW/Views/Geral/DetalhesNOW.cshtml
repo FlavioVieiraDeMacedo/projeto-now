@@ -1,0 +1,78 @@
+﻿@model FormularioNOW.Models.NOW
+@{
+    ViewBag.Title = "DetalhesNOW";
+}
+
+<div class="container">
+    <h2>DetalhesNOW</h2>
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <h3>Projeto: @Model.Nome</h3>
+            <h4>Descrição: @Model.Descricao</h4>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <h2>Engenharia</h2>
+    <div class="panel panel-default">
+        <div class="panel-body">
+            @if (Model.Engenharia_status)
+            {
+                <p>@Model.Engenharia</p>
+            }
+            else
+            {
+                <p><i class="fa fa-times" aria-hidden="true"></i> Perguntas ainda não respondidas</p>
+            }
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <h2>Compras</h2>
+    <div class="panel panel-default">
+        <div class="panel-body">
+            @if (Model.Compras_status)
+            {
+                <p>@Model.Compras</p>
+            }
+            else
+            {
+                <p> <i class="fa fa-times" aria-hidden="true"></i> Perguntas ainda não respondidas</p>
+            }
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <h2>Qualidade</h2>
+    <div class="panel panel-default">
+        <div class="panel-body">
+            @if (Model.Qualidade_status)
+            {
+                <p>@Model.Qualidade</p>
+            }
+            else
+            {
+                <p> <i class="fa fa-times" aria-hidden="true"></i> Perguntas ainda não respondidas</p>
+            }
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <h2>TI</h2>
+    <div class="panel panel-default">
+        <div class="panel-body">
+            @if (Model.TI_status)
+            {
+                <p>@Model.TI</p>
+            }
+            else
+            {
+                <p> <i class="fa fa-times" aria-hidden="true"></i> Perguntas ainda não respondidas</p>
+            }
+        </div>
+    </div>
+</div>

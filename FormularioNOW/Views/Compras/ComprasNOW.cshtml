@@ -1,0 +1,35 @@
+﻿@model FormularioNOW.Models.NOW
+@{
+    ViewBag.Title = "ComprasNOW";
+}
+
+<h2>ComprasNOW</h2>
+
+
+    Nome: @Model.Nome
+    Descrição: @Model.Descricao
+
+<div class="container">
+    <h2>Engenharia</h2>
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <p>@Model.Engenharia</p>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <h2>TI</h2>
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <p>@Model.TI</p>
+        </div>
+    </div>
+</div>
+
+    @using (@Html.BeginForm())
+    {
+        <p>Perguntas especificas para Compras</p>
+        @Html.TextBoxFor(a => a.Compras);
+
+        <button type="submit">Enviar</button>
+    }

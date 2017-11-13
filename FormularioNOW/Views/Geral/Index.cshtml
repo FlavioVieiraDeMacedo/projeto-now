@@ -1,0 +1,60 @@
+﻿@model List<FormularioNOW.Models.NOW>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<table class="table table-hover table-dark">
+    <tr>
+        <th>Nome</th>
+        <th>Engenharia</th>
+        <th>Compras</th>
+        <th>TI</th>
+        <th>Qualidade</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.ActionLink(@item.Nome, "DetalhesNOW", new { Id = @item.ID_now })
+            </td>
+
+                @if (item.Engenharia_status)
+                {
+                    <td><i class="fa fa-square" aria-hidden="true" style="color:greenyellow"></td>
+                
+                }else
+                {
+                    <td><i class="fa fa-square" aria-hidden="true" style="color:red"></td>
+                }
+                @if (item.Compras_status)
+                {
+                    <td><i class="fa fa-square" aria-hidden="true" style="color:greenyellow"></td>
+
+                }
+                else
+                {
+                    <td><i class="fa fa-square" aria-hidden="true" style="color:red"></td>
+                }
+                @if (item.TI_status)
+                {
+                    <td><i class="fa fa-square" aria-hidden="true" style="color:greenyellow"></td>
+
+                }
+                else
+                {
+                    <td><i class="fa fa-square" aria-hidden="true" style="color:red"></td>
+                }
+                @if (item.Qualidade_status)
+                {
+                    <td><i class="fa fa-square" aria-hidden="true" style="color:greenyellow"></td>
+
+                }
+                else
+                {
+                    <td><i class="fa fa-square" aria-hidden="true" style="color:red"></td>
+                }
+            
+        </tr>
+    }
+</table>

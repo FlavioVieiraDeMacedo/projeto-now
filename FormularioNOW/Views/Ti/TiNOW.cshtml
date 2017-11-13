@@ -1,0 +1,16 @@
+﻿@model FormularioNOW.Models.NOW
+@{
+    ViewBag.Title = "TiNOW";
+}
+
+<h2>TiNOW</h2>
+
+    Nome: @Model.Nome
+    Descrição: @Model.Descricao
+    @using (@Html.BeginForm())
+    {
+        <p>Perguntas especificas para TI</p>
+        @Html.TextBoxFor(a => a.TI);
+
+        <button type="submit">Enviar</button>
+    }

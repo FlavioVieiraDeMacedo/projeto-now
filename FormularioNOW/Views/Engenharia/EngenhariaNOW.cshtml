@@ -1,0 +1,17 @@
+﻿@model FormularioNOW.Models.NOW
+@{
+    ViewBag.Title = "EngenhariaNOW";
+}
+
+<h2>EngenhariaNOW</h2>
+
+
+    Nome: @Model.Nome
+    Descrição: @Model.Descricao
+@using (@Html.BeginForm())
+{
+    <p>Perguntas especificas para Engenharia</p>
+    @Html.TextBoxFor(a => a.Engenharia);
+
+    <button type="submit">Enviar</button>
+}
