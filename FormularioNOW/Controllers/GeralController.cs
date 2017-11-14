@@ -29,7 +29,7 @@ namespace FormularioNOW.Controllers
         public ActionResult GerarNOW(NOW now)
         {
             DAO.NowDAO.Cadastrar(now);
-            return View();
+            return View("Index");
         }
         #endregion
 

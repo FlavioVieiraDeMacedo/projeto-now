@@ -4,17 +4,20 @@
 }
 
 <h2>Index</h2>
-<table class="table table-hover table-dark">
-    <tr>
-        <th>Nome</th>
-        <th>Engenharia</th>
-        <th>Compras</th>
-        <th>TI</th>
-        <th>Qualidade</th>
+<table class="table table-hover table-dark" style="text-align:center">
+    <tr style="text-align:center">
+        <th style="text-align:center" >Nome</th>
+        <th style="text-align:center">Engenharia</th>
+        <th style="text-align:center">Compras</th>
+        <th style="text-align:center">TI</th>
+        <th style="text-align:center">Qualidade</th>
+        <th style="text-align:center">Produto</th>
+        <th style="text-align:center">Prod Soft</th>
+        <th style="text-align:center">Financeiro</th>
     </tr>
     @foreach (var item in Model)
     {
-        <tr>
+        <tr >
             <td>
                 @Html.ActionLink(@item.Nome, "DetalhesNOW", new { Id = @item.ID_now })
             </td>
@@ -54,6 +57,35 @@
                 {
                     <td><i class="fa fa-square" aria-hidden="true" style="color:red"></td>
                 }
+
+
+            @if (item.Produto_status)
+                {
+                <td><i class="fa fa-square" aria-hidden="true" style="color:greenyellow"></td>
+
+            }
+            else
+            {
+                <td><i class="fa fa-square" aria-hidden="true" style="color:red"></td>
+            }
+            @if (item.ProdSoft_status)
+                {
+                <td><i class="fa fa-square" aria-hidden="true" style="color:greenyellow"></td>
+
+            }
+            else
+            {
+                <td><i class="fa fa-square" aria-hidden="true" style="color:red"></td>
+            }
+            @if (item.Financeiro_status)
+                {
+                <td><i class="fa fa-square" aria-hidden="true" style="color:greenyellow"></td>
+
+            }
+            else
+            {
+                <td><i class="fa fa-square" aria-hidden="true" style="color:red"></td>
+            }
             
         </tr>
     }

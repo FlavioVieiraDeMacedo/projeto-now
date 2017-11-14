@@ -3,7 +3,7 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Engenharia</h2>
+<h2>Prod Soft</h2>
 <table class="table">
     <tr>
         <th>Nome</th>
@@ -14,7 +14,7 @@
         <tr>
             <td>@item.Nome</td>
             <td>@item.Descricao</td>
-            <td><div style="font-size:30px">@Html.ActionLink(" ", "EngenhariaNOW", new { Id_Now = @item.ID_now }, new { @class = "fa fa-pencil-square fa-2", Style = "text-decoration: none;" })</div></td>
-         </tr>
+            <td><div style="font-size:30px">@Html.ActionLink(" ", "ProdSoftNOW", new { Id_Now = @item.ID_now }, new { @class = "fa fa-pencil-square fa-2", Style = "text-decoration: none;" })</div></td>
+        </tr>
     }
 </table>
