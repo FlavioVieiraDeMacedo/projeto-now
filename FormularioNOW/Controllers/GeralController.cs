@@ -8,9 +8,9 @@ using System.Web.Mvc;
 
 namespace FormularioNOW.Controllers
 {
+    [Authorize]
     public class GeralController : Controller
     {
-
         #region Geral
         [HttpGet]
         public ActionResult Index()
@@ -25,6 +25,7 @@ namespace FormularioNOW.Controllers
         {
             return View();
         }
+
         [HttpPost]
         public ActionResult GerarNOW(NOW now)
         {
@@ -32,7 +33,6 @@ namespace FormularioNOW.Controllers
             return View("Index");
         }
         #endregion
-
 
         [HttpGet]
         public ActionResult DetalhesNOW(int Id)

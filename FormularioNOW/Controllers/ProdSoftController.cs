@@ -8,6 +8,7 @@ using System.Web.Mvc;
 
 namespace FormularioNOW.Controllers
 {
+    [Authorize]
     public class ProdSoftController : Controller
     {
         #region Geral

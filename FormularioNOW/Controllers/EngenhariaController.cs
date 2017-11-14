@@ -7,6 +7,7 @@ using System.Web.Mvc;
 
 namespace FormularioNOW.Models
 {
+    [Authorize]
     public class EngenhariaController : Controller
     {
         #region Geral

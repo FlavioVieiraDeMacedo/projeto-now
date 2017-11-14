@@ -7,11 +7,40 @@
 
 @using (@Html.BeginForm())
 {
-    @Html.LabelFor(a => a.Nome);
-    @Html.TextBoxFor(a => a.Nome);
-    <br />
-    @Html.LabelFor(a => a.Descricao);
-    @Html.TextBoxFor(a => a.Descricao);
+    <div class="container">
+        <h2>Informações Basicas</h2>
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="form-group">
+                    @Html.TextBoxFor(a => a.Nome, new { @class = "form-control", placeholder ="NOME"})    
+                </div>
+                <div class="form-group">
+                    @Html.TextAreaFor(a => a.Descricao, new { @class = "form-control", placeholder = "DESCRIÇÃO"})
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <h2>Dispensar Setores</h2>
+        <div class="panel panel-default">
+            <div class="panel-body">
+                @Html.CheckBoxFor(a=>a.Engenharia_status)
+                @Html.Label("Engenharia")
+               <hr />
+                @Html.CheckBoxFor(a => a.Produto_status)
+                @Html.Label("Produtos")
+                <hr />
+                @Html.CheckBoxFor(a => a.ProdSoft_status)
+                @Html.Label("Prod Soft")
+                <hr />
+                @Html.CheckBoxFor(a => a.TI_status)
+                @Html.Label("TI")
+                <hr />
+                @Html.CheckBoxFor(a => a.Qualidade_status)
+                @Html.Label("Qualidade")
+            </div>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Enviar</button>
 
-    <button type="submit">Enviar</button>
 }

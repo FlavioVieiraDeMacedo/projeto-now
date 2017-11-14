@@ -7,6 +7,7 @@ using System.Web.Mvc;
 
 namespace FormularioNOW.DAO
 {
+    [Authorize]
     public class QualidadeController : Controller
     {
         #region Geral

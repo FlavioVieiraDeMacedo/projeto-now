@@ -3,15 +3,31 @@
     ViewBag.Title = "QualidadeNOW";
 }
 
-<h2>QualidadeNOW</h2>
+<div class="container">
+    <h2>QualidadeNOW</h2>
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <h3>Projeto: @Model.Nome</h3>
+            <h4>Descrição: @Model.Descricao</h4>
+        </div>
+    </div>
+</div>
 
-
-Nome: @Model.Nome
-Descrição: @Model.Descricao
-@using(@Html.BeginForm())
+@using (@Html.BeginForm())
 {
-        <p>Perguntas especificas para Qualidade</p>
-        @Html.TextBoxFor(a => a.Qualidade);
+    <div class="container">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="form-group">
+                    <h3>Perguntas especificas para Engenharia</h3>
+                    @Html.TextAreaFor(a => a.Qualidade, new { @class = "form-control", placeholder = "Qualidade" })
+                </div>
 
-        <button type="submit">Enviar</button>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </div>
+
+        </div>
+
+    </div>
+
 }

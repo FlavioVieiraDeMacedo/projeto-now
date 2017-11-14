@@ -3,14 +3,31 @@
     ViewBag.Title = "TiNOW";
 }
 
-<h2>TiNOW</h2>
+<div class="container">
+    <h2>TiNOW</h2>
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <h3>Projeto: @Model.Nome</h3>
+            <h4>Descrição: @Model.Descricao</h4>
+        </div>
+    </div>
+</div>
 
-    Nome: @Model.Nome
-    Descrição: @Model.Descricao
-    @using (@Html.BeginForm())
-    {
-        <p>Perguntas especificas para TI</p>
-        @Html.TextBoxFor(a => a.TI);
+@using (@Html.BeginForm())
+{
+    <div class="container">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="form-group">
+                    <h3>Perguntas especificas para Engenharia</h3>
+                    @Html.TextAreaFor(a => a.TI, new { @class = "form-control", placeholder = "TI" })
+                </div>
 
-        <button type="submit">Enviar</button>
-    }
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </div>
+
+        </div>
+
+    </div>
+
+}

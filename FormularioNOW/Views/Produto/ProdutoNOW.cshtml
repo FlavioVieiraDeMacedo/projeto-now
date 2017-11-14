@@ -4,14 +4,33 @@
     ViewBag.Title = "ProdutoNOW";
 }
 
-<h2>ProdutoNOW</h2>
 
-Nome: @Model.Nome
-Descrição: @Model.Descricao
+
+<div class="container">
+    <h2>ProdutoNOW</h2>
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <h3>Projeto: @Model.Nome</h3>
+            <h4>Descrição: @Model.Descricao</h4>
+        </div>
+    </div>
+</div>
+
 @using (@Html.BeginForm())
 {
-    <p>Perguntas especificas para Produto</p>
-        @Html.TextBoxFor(a => a.Produto);
+    <div class="container">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <div class="form-group">
+                    <h3>Perguntas especificas para Engenharia</h3>
+                    @Html.TextAreaFor(a => a.Produto, new { @class = "form-control", placeholder = "Produto" })
+                </div>
 
-    <button type="submit">Enviar</button>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </div>
+
+        </div>
+
+    </div>
+
 }

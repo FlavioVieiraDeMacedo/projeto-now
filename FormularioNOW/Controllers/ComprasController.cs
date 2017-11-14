@@ -8,6 +8,7 @@ using System.Web.Mvc;
 
 namespace FormularioNOW.Controllers
 {
+    [Authorize]
     public class ComprasController : Controller
     {
         #region Geral
