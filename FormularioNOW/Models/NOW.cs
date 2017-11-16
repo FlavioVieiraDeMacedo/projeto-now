@@ -17,6 +17,8 @@ namespace FormularioNOW.Models
         public bool Engenharia_status { get; set; }
         public string Engenharia { get; set; }
         public string ComentariosParaEngenharia { get; set; }
+        public bool NecessitaNovaMaquina { get; set; }
+        public string DescricaoMaquina { get; set; }
 
         public bool Compras_status { get; set; }
         public string Compras { get; set; }

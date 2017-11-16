@@ -15,6 +15,8 @@ namespace FormularioNOW.DAO
             using (var ctx = new NowContext())
             {
                 ctx.Now.Find(now.ID_now).Engenharia = now.Engenharia;
+                ctx.Now.Find(now.ID_now).NecessitaNovaMaquina = now.NecessitaNovaMaquina;
+                ctx.Now.Find(now.ID_now).DescricaoMaquina = now.DescricaoMaquina;
                 ctx.Now.Find(now.ID_now).Engenharia_status = true;
                 ctx.SaveChanges();
             }

@@ -13,6 +13,8 @@
                      alt="">
 @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-signin", role = "form" }))
 {
+                    @Html.AntiForgeryToken()
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
                     @Html.TextBoxFor(m => m.Email, new { @class = "form-control", placeholder = "Email" })
 
                     @Html.PasswordFor(m => m.Password, new { @class = "form-control", placeholder = "Senha" })

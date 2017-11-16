@@ -19,7 +19,19 @@
         <div class="panel-body">
             @if (Model.Engenharia_status)
             {
+                <h3>Geral</h3>
                 <p>@Model.Engenharia</p>
+                <hr />
+                <h3>Maquinas</h3>
+                if (Model.NecessitaNovaMaquina)
+                {
+                    <p>precisa de maquina nova? SIM </p>
+                    <p>Descrição : @Model.DescricaoMaquina</p>
+                }
+                else
+                {
+                    <p>precisa de maquina nova? NÃO</p>
+                }
             }
             else
             {
@@ -35,7 +47,14 @@
         <div class="panel-body">
             @if (Model.Compras_status)
             {
-                <p>@Model.Compras</p>
+                if (Model.Compras == "")
+                {
+                    <p>@Model.Compras</p>
+                }
+                else
+                {
+                    <p><i class="fa fa-times" aria-hidden="true"></i> Setor não necessario</p>
+                }
             }
             else
             {
@@ -51,7 +70,14 @@
         <div class="panel-body">
             @if (Model.Qualidade_status)
             {
-                <p>@Model.Qualidade</p>
+                if (Model.Qualidade == "")
+                {
+                    <p>@Model.Qualidade</p>
+                }
+                else
+                {
+                    <p><i class="fa fa-times" aria-hidden="true"></i> Setor não necessario</p>
+                }
             }
             else
             {
@@ -67,7 +93,15 @@
         <div class="panel-body">
             @if (Model.TI_status)
             {
-                <p>@Model.TI</p>
+
+                if (Model.TI == "")
+                {
+                    <p>@Model.TI</p>
+                }
+                else
+                {
+                    <p><i class="fa fa-times" aria-hidden="true"></i> Setor não necessario</p>
+                }
             }
             else
             {
@@ -83,7 +117,14 @@
         <div class="panel-body">
             @if (Model.Produto_status)
             {
-                <p>@Model.Produto</p>
+                if (Model.Produto == "")
+                {
+                    <p>@Model.Produto</p>
+                }
+                else
+                {
+                    <p><i class="fa fa-times" aria-hidden="true"></i> Setor não necessario</p>
+                }
             }
             else
             {
@@ -99,7 +140,14 @@
         <div class="panel-body">
             @if (Model.ProdSoft_status)
             {
-                <p>@Model.ProdSoft</p>
+                if (Model.ProdSoft == "")
+                {
+                    <p>@Model.ProdSoft</p>
+                }
+                else
+                {
+                    <p><i class="fa fa-times" aria-hidden="true"></i> Setor não necessario</p>
+                }
             }
             else
             {
@@ -115,7 +163,14 @@
         <div class="panel-body">
             @if (Model.Financeiro_status)
             {
-                <p>@Model.Financeiro</p>
+                if (Model.Financeiro == "")
+                {
+                    <p>@Model.Financeiro</p>
+                }
+                else
+                {
+                    <p><i class="fa fa-times" aria-hidden="true"></i> Setor não necessario</p>
+                }
             }
             else
             {

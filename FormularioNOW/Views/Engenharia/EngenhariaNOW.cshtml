@@ -22,6 +22,11 @@
                     <h3>Perguntas especificas para Engenharia</h3>
                     @Html.TextAreaFor(a => a.Engenharia, new { @class = "form-control", placeholder = "Engenharia" })
                 </div>
+                <div class="form-group">
+                    <h3>Precisa de maquina nova?</h3>
+                    @Html.CheckBoxFor(a=>a.NecessitaNovaMaquina)
+                    @Html.TextAreaFor(a => a.DescricaoMaquina, new { @class = "form-control", placeholder = "Descrição Maquina" })
+                </div>
 
                 <button type="submit" class="btn btn-primary">Enviar</button>
             </div>
