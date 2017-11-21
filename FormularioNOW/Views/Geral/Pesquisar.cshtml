@@ -1,0 +1,30 @@
+﻿@model List<FormularioNOW.Models.NOW>
+
+@{
+    ViewBag.Title = "Pesquisar";
+}
+
+
+@using (@Html.BeginForm("Pesquisar", "Geral", FormMethod.Get))
+{
+    <div class="panel-body">
+        <h2>Pesquisar</h2>
+        <div class="form-group">
+            @Html.TextBox("pesquisa",null, new { @class = "form-control", placeholder = "Pesquisar" })
+        </div>
+        <button type="submit" class="btn btn-primary">Pesquisar</button>
+       
+    </div>
+}   
+
+@foreach (var item in Model)
+{
+    <div class="container">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <h3>Nome: @item.Nome</h3>
+                <p>Descrição: @item.Descricao</p>
+            </div>
+        </div>
+    </div>
+}

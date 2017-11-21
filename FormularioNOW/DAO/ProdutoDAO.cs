@@ -15,7 +15,11 @@ namespace FormularioNOW.DAO
             using (var ctx = new NowContext())
             {
                 ctx.Now.Find(now.ID_now).Produto = now.Produto;
-                ctx.Now.Find(now.ID_now).Produto_status = true;
+                ctx.Now.Find(now.ID_now).Produto_status = true; 
+                ctx.Now.Find(now.ID_now).Qualidade_status = now.Qualidade_status== true ? false : true;
+                ctx.Now.Find(now.ID_now).Engenharia_status = now.Engenharia_status== true ? false : true;
+                ctx.Now.Find(now.ID_now).ProdSoft_status = now.ProdSoft_status == true ? false : true;
+                ctx.Now.Find(now.ID_now).TI_status = now.TI_status == true ? false : true;
                 ctx.SaveChanges();
             }
         }

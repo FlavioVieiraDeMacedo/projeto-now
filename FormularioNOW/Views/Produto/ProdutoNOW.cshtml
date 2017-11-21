@@ -4,8 +4,6 @@
     ViewBag.Title = "ProdutoNOW";
 }
 
-
-
 <div class="container">
     <h2>ProdutoNOW</h2>
     <div class="panel panel-default">
@@ -22,15 +20,31 @@
         <div class="panel panel-default">
             <div class="panel-body">
                 <div class="form-group">
-                    <h3>Perguntas especificas para Engenharia</h3>
+                    <h3>Perguntas especificas para Produtos</h3>
                     @Html.TextAreaFor(a => a.Produto, new { @class = "form-control", placeholder = "Produto" })
                 </div>
-
-                <button type="submit" class="btn btn-primary">Enviar</button>
             </div>
-
         </div>
-
     </div>
 
+    <div class="container">
+        <h2>Setores Envolvidos</h2>
+        <div class="panel panel-default">
+            <div class="panel-body">
+                @Html.CheckBoxFor(a => a.Engenharia_status)
+                @Html.Label("Engenharia")
+                <hr />
+                @Html.CheckBoxFor(a => a.ProdSoft_status)
+                @Html.Label("Prod Soft")
+                <hr />
+                @Html.CheckBoxFor(a => a.TI_status)
+                @Html.Label("TI")
+                <hr />
+                @Html.CheckBoxFor(a => a.Qualidade_status)
+                @Html.Label("Qualidade")
+            </div>
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Enviar</button>
 }

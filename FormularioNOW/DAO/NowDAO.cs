@@ -21,7 +21,7 @@ namespace FormularioNOW.DAO
         #endregion
         
         #region Cadastrar QUALIDADE
-        public static void CadastrarQualidade(NOW now)
+        /*public static void CadastrarQualidade(NOW now)
         {
             using (var ctx = new NowContext())
             {
@@ -29,11 +29,11 @@ namespace FormularioNOW.DAO
                 ctx.Now.Find(now.ID_now).Qualidade_status = true;
                 ctx.SaveChanges();
             }
-        }
+        }*/
         #endregion
 
         #region Cadastrar TI
-        public static void CadastrarTI(NOW now)
+       /* public static void CadastrarTI(NOW now)
         {
             using (var ctx = new NowContext())
             {
@@ -41,7 +41,7 @@ namespace FormularioNOW.DAO
                 ctx.Now.Find(now.ID_now).TI_status = true;
                 ctx.SaveChanges();
             }
-        }
+        }*/
         #endregion
 
         #region Editar TUDO
@@ -52,13 +52,15 @@ namespace FormularioNOW.DAO
                 ctx.Now.Find(now.ID_now).Nome = now.Nome;
                 ctx.Now.Find(now.ID_now).Descricao = now.Descricao;
                 ctx.Now.Find(now.ID_now).Compras = now.Compras;
-                ctx.Now.Find(now.ID_now).Compras_status = now.Compras_status;
                 ctx.Now.Find(now.ID_now).Engenharia = now.Engenharia;
-                ctx.Now.Find(now.ID_now).Engenharia_status = now.Engenharia_status;
                 ctx.Now.Find(now.ID_now).Qualidade = now.Qualidade;
-                ctx.Now.Find(now.ID_now).Qualidade_status = now.Qualidade_status;
                 ctx.Now.Find(now.ID_now).TI = now.TI;
+
+                ctx.Now.Find(now.ID_now).Compras_status = now.Compras_status;
+                ctx.Now.Find(now.ID_now).Engenharia_status = now.Engenharia_status;
+                ctx.Now.Find(now.ID_now).Qualidade_status = now.Qualidade_status;
                 ctx.Now.Find(now.ID_now).TI_status = now.TI_status;
+
                 ctx.SaveChanges();
             }
         }
@@ -87,6 +89,16 @@ namespace FormularioNOW.DAO
             using (var ctx = new NowContext())
             {
                 return ctx.Now.Find(id);
+            }
+        }
+        #endregion
+
+        #region Pesquisar por nome e desc
+        public static List<NOW> pesquisarNome(string pesquisa)
+        {
+            using (var ctx = new NowContext())
+            {
+                return ctx.Now.Where(a => a.Nome.Contains(pesquisa) || a.Descricao.Contains(pesquisa)).ToList();
             }
         }
         #endregion

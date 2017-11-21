@@ -30,7 +30,7 @@ namespace FormularioNOW.Controllers
         public ActionResult GerarNOW(NOW now)
         {
             DAO.NowDAO.Cadastrar(now);
-            return View("Index");
+            return RedirectToAction("Index");
         }
         #endregion
 
@@ -39,6 +39,21 @@ namespace FormularioNOW.Controllers
         {
             NOW Now = DAO.NowDAO.pesquisarID(Id);
             return View(Now);
+        }
+
+        [HttpGet]
+        public ActionResult Pesquisar(string pesquisa)
+        {
+            List<NOW> ListaNow = new List<NOW>();
+            if (pesquisa == null)
+            {
+                ListaNow = NowDAO.listar();
+            }
+            else
+            {
+                ListaNow = NowDAO.pesquisarNome(pesquisa);
+            }
+            return View(ListaNow);
         }
 
     }

@@ -30,7 +30,7 @@ namespace FormularioNOW.DAO
                     return ctx.Now.Where(a => a.Financeiro_status == false &&
                                               a.TI_status == true && 
                                               a.Engenharia_status == true && 
-                                              a.ProdSoft_status == true &&
+                                              a.Produto_status == true &&
                                               a.Qualidade_status == true &&
                                               a.Compras_status == true &&
                                               a.ProdSoft_status == true).ToList();

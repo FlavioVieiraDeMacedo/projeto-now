@@ -27,7 +27,7 @@ namespace FormularioNOW.DAO
             {
                 using (var ctx = new NowContext())
                 {
-                    return ctx.Now.Where(a => a.Compras_status == false && a.TI_status == true && a.Engenharia_status == true).ToList();
+                    return ctx.Now.Where(a => a.Compras_status == false && a.TI_status == true && a.Engenharia_status == true && a.Produto_status==true).ToList();
                 }
             }
             catch (Exception)
