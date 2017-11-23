@@ -17,15 +17,20 @@
 {
     <div class="container">
         <div class="panel panel-default">
+            
             <div class="panel-body">
                 <div class="form-group">
-                    <h3>Perguntas especificas para Engenharia</h3>
-                    @Html.TextAreaFor(a => a.TI, new { @class = "form-control", placeholder = "TI" })
+                    <h3>Arquivo Transmitido Por Um Terceiro</h3>
+                    @Html.TextBoxFor(a => a.TransmitidoTerceiro, new { @class = "form-control", placeholder = "Arquivo Transmitido Por Terceiro" })
                 </div>
-
-                <button type="submit" class="btn btn-primary">Enviar</button>
             </div>
-
+            <div class="panel-body">
+                <div class="form-group">
+                    <h3>Outras Informações</h3>
+                    @Html.TextAreaFor(a => a.TI, new { @class = "form-control", placeholder = "Outras Informações" })
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
         </div>
 
     </div>

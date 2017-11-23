@@ -19,20 +19,239 @@
         <div class="panel panel-default">
             <div class="panel-body">
                 <div class="form-group">
-                    <h3>Perguntas especificas para Engenharia</h3>
-                    @Html.TextAreaFor(a => a.Engenharia, new { @class = "form-control", placeholder = "Engenharia" })
+                    <h3>Perguntas Gerais</h3>
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4">
+                            @Html.EditorFor(a => a.ProducaoCartao)
+                            @Html.LabelFor(a => a.ProducaoCartao)
+                            <br />
+                            @Html.EditorFor(a => a.ProducaoBerco)
+                            @Html.LabelFor(a => a.ProducaoBerco)
+                            <br />
+                            @Html.EditorFor(a => a.InicializaModulo)
+                            @Html.LabelFor(a => a.InicializaModulo)
+                        </div>
+                        <div class="col-lg-4 col-md-4">
+                            @Html.EditorFor(a => a.PersonalizaCartao)
+                            @Html.LabelFor(a => a.PersonalizaCartao)
+                            <br />
+                            @Html.EditorFor(a => a.PersonalizaBerco)
+                            @Html.LabelFor(a => a.PersonalizaBerco)
+                        </div>
+                        <div class="col-lg-4 col-md-4">
+                            @Html.EditorFor(a => a.Folheteria)
+                            @Html.LabelFor(a => a.Folheteria)
+                            <br />
+                            @Html.EditorFor(a => a.EmbalagemEExpedicao)
+                            @Html.LabelFor(a => a.EmbalagemEExpedicao)
+                        </div>
+                    </div>
                 </div>
+                <hr />
                 <div class="form-group">
-                    <h3>Precisa de maquina nova?</h3>
-                    @Html.CheckBoxFor(a=>a.NecessitaNovaMaquina)
-                    @Html.TextAreaFor(a => a.DescricaoMaquina, new { @class = "form-control", placeholder = "Descrição Maquina" })
+                    <h3>Impressão</h3>
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4">
+                            @Html.LabelFor(a => a.TipoImpressao)<br />
+                            @Html.EditorFor(a => a.TipoImpressao)
+                        </div>
+                        <div class="col-lg-4 col-md-4">
+                            @Html.LabelFor(a => a.coresFrenteVerso)<br />
+                            @Html.EditorFor(a => a.coresFrenteVerso)
+                        </div>
+                        <div class="col-lg-4 col-md-4" >
+                            @Html.LabelFor(a => a.Invisivel)<br />
+                            @Html.EditorFor(a => a.Invisivel)
+                        </div>
+                    </div>
                 </div>
-
-                <button type="submit" class="btn btn-primary">Enviar</button>
+                <hr />
+                <div class="form-group">
+                    <h3>Cartão</h3>
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4" >
+                            @Html.LabelFor(a => a.Funcionalidade)<br />
+                            @Html.EditorFor(a => a.Funcionalidade)
+                            <br /><br />
+                            @Html.LabelFor(a => a.TamanhoCartao)<br />
+                            @Html.EditorFor(a => a.TamanhoCartao)
+                            <br /><br />
+                            @Html.LabelFor(a => a.MaterialCartao)<br />
+                            @Html.EditorFor(a => a.MaterialCartao)
+                            <br /><br />
+                            @Html.LabelFor(a => a.EspessuraCartao)<br />
+                            @Html.EditorFor(a => a.EspessuraCartao)
+                            <br /><br />
+                            @Html.LabelFor(a => a.PainelAssinatura)<br />
+                            @Html.EditorFor(a => a.PainelAssinatura)
+                            <br /><br />
+                            @Html.LabelFor(a => a.Holograma)<br />
+                            @Html.EditorFor(a => a.Holograma)
+                            <br /><br />
+                            @Html.LabelFor(a => a.AntiScanner)<br />
+                            @Html.EditorFor(a => a.AntiScanner)
+                            
+                           
+                        </div>
+                        <div class="col-lg-4 col-md-4" >
+                            @Html.LabelFor(a => a.Kinegrama)<br />
+                            @Html.EditorFor(a => a.Kinegrama)
+                            <br /><br />
+                            @Html.LabelFor(a => a.MLI)<br />
+                            @Html.EditorFor(a => a.MLI)
+                            <br /><br />
+                            @Html.LabelFor(a => a.RelevoTactil)<br />
+                            @Html.EditorFor(a => a.RelevoTactil)
+                            <br /><br />
+                            @Html.LabelFor(a => a.TintaSeguranca)<br />
+                            @Html.EditorFor(a => a.TintaSeguranca)
+                            <br /><br />
+                            @Html.LabelFor(a => a.OVI)<br />
+                            @Html.EditorFor(a => a.OVI)
+                            <br /><br />
+                            @Html.LabelFor(a => a.UV)<br />
+                            @Html.EditorFor(a => a.UV)
+                            
+                            
+                        </div>
+                        <div class="col-lg-4 col-md-4" >
+                            @Html.LabelFor(a => a.IR)<br />
+                            @Html.EditorFor(a => a.IR)
+                            <br /><br />
+                            @Html.LabelFor(a => a.HotStamping)<br />
+                            @Html.EditorFor(a => a.HotStamping)
+                            <br /><br />
+                            @Html.LabelFor(a => a.PlugInPuching)<br />
+                            @Html.EditorFor(a => a.PlugInPuching)
+                            <br /><br />
+                            @Html.LabelFor(a => a.Milling)<br />
+                            @Html.EditorFor(a => a.Milling)
+                            <br /><br />
+                            @Html.LabelFor(a => a.Embedding)<br />
+                            @Html.EditorFor(a => a.Embedding)
+                            <br /><br />
+                            @Html.LabelFor(a => a.GlupeTape)<br />
+                            @Html.EditorFor(a => a.GlupeTape)
+                        </div>
+                    </div>
+                </div>
+                <hr />
+                <div class="form-group">
+                    <h3>Personalização</h3>
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4">
+                            @Html.LabelFor(a => a.PersoMachine)<br />
+                            @Html.EditorFor(a => a.PersoMachine)
+                            <br /><br />
+                            @Html.LabelFor(a => a.Embossing)<br />
+                            @Html.EditorFor(a => a.Embossing)
+                            <br /><br />
+                            @Html.LabelFor(a => a.Termo)<br />
+                            @Html.EditorFor(a => a.Termo)
+                            <br /><br />
+                            @Html.LabelFor(a => a.CorFitaTermo)<br />
+                            @Html.EditorFor(a => a.CorFitaTermo)
+                            <br /><br />
+                            @Html.LabelFor(a => a.TarjaMagnetica)<br />
+                            @Html.EditorFor(a => a.TarjaMagnetica)
+                        </div>
+                        <div class="col-lg-4 col-md-4">
+                            @Html.LabelFor(a => a.GuardCard)<br />
+                            @Html.EditorFor(a => a.GuardCard)
+                            <br /><br />
+                            @Html.LabelFor(a => a.Foto)<br />
+                            @Html.EditorFor(a => a.Foto)
+                            <br /><br />
+                            @Html.LabelFor(a => a.ChipPerso)<br />
+                            @Html.EditorFor(a => a.ChipPerso)
+                            <br /><br />
+                            @Html.LabelFor(a => a.MifarePerso)<br />
+                            @Html.EditorFor(a => a.MifarePerso)
+                        </div>
+                        <div class="col-lg-4 col-md-4" >
+                            @Html.LabelFor(a => a.LaserEngraving)<br />
+                            @Html.EditorFor(a => a.LaserEngraving)
+                            <br /><br />
+                            @Html.LabelFor(a => a.LaserEngravingPolicarbonato)<br />
+                            @Html.EditorFor(a => a.LaserEngravingPolicarbonato)
+                            <br /><br />
+                            @Html.LabelFor(a => a.CapturaEditora)<br />
+                            @Html.EditorFor(a => a.CapturaEditora)
+                            <br /><br />
+                            @Html.LabelFor(a => a.EtiquetaRaspadinha)<br />
+                            @Html.EditorFor(a => a.EtiquetaRaspadinha)
+                        </div>
+                    </div>
+                </div>
+                <hr />
+                <div class="form-group">
+                    <h3>Folheteria</h3>
+                    <div class="row" >
+                        <div class="col-lg-4 col-md-4" >
+                            @Html.LabelFor(a => a.Manuseio)<br />
+                            @Html.EditorFor(a => a.Manuseio)
+                            <br /><br />
+                            @Html.LabelFor(a => a.FolheteriaPropria)<br />
+                            @Html.EditorFor(a => a.FolheteriaPropria)
+                            <br /><br />
+                            @Html.LabelFor(a => a.KitContem)<br />
+                            @Html.EditorFor(a => a.KitContem)
+                            <br /><br />
+                            @Html.LabelFor(a => a.Embalagem)<br />
+                            @Html.EditorFor(a => a.Embalagem)
+                        </div>
+                        <div class="col-lg-4 col-md-4" >
+                            @Html.LabelFor(a => a.GramaturaBerco)<br />
+                            @Html.EditorFor(a => a.GramaturaBerco)
+                            <br /><br />
+                            @Html.LabelFor(a => a.CorBerco)<br />
+                            @Html.EditorFor(a => a.CorBerco)
+                            <br /><br />
+                            @Html.LabelFor(a => a.TamanhoBerco)<br />
+                            @Html.EditorFor(a => a.TamanhoBerco)
+                            <br /><br />
+                            @Html.LabelFor(a => a.Destruicao)<br />
+                            @Html.EditorFor(a => a.Destruicao)
+                        </div>
+                        <div class="col-lg-4 col-md-4" >
+                            @Html.LabelFor(a => a.GramaturaEnvelope)<br />
+                            @Html.EditorFor(a => a.GramaturaEnvelope)
+                            <br /><br />
+                            @Html.LabelFor(a => a.CorEnvelope)<br />
+                            @Html.EditorFor(a => a.CorEnvelope)
+                            <br /><br />
+                            @Html.LabelFor(a => a.TamanhoEnvelope)<br />
+                            @Html.EditorFor(a => a.TamanhoEnvelope)
+                            <br /><br />
+                            @Html.LabelFor(a => a.Etiqueta)<br />
+                            @Html.EditorFor(a => a.Etiqueta)
+                        </div>
+                        </div>
+                </div>
+                <hr />
+                <div class="form-group">
+                    <h3>Volumes</h3>
+                    <div class="row">
+                        <div class="col-lg-4 col-md-4">
+                            @Html.LabelFor(a => a.VolumeTotal)<br />
+                            @Html.EditorFor(a => a.VolumeTotal)
+                        </div>
+                        <div class="col-lg-4 col-md-4">
+                            @Html.LabelFor(a => a.SLA)<br />
+                            @Html.EditorFor(a => a.SLA)
+                        </div>
+                    </div>
+                </div>
+                <hr />
+                <div class="form-group">
+                    <div class="col-lg-4 col-md-6">
+                        <button type="submit" class="btn btn-primary btn-lg">Enviar</button>
+                    </div>
+                </div>
+                
             </div>
 
         </div>
-        
     </div>
     
 }

@@ -36,10 +36,31 @@
         <div class="panel panel-default">
             <div class="panel-body">
                 <div class="form-group">
-                    <h3>Perguntas especificas para Compras</h3>
-                    @Html.TextAreaFor(a => a.Compras, new { @class = "form-control", placeholder = "Produto" })
+                    <h3>Custo Com Amostra</h3>
+                    @Html.TextBoxFor(a => a.CustoComAmostra, new { @class = "form-control", placeholder = "Custo Com Amostra" })
+                </div>
+                <div class="form-group">
+                    <h3>Frete pago pela GD</h3>
+                    @Html.TextBoxFor(a => a.FreteGD, new { @class = "form-control", placeholder = "Frete GD" })
                 </div>
 
+                <div class="form-group">
+                    <h3>UF De Destino</h3>
+                    @Html.TextBoxFor(a => a.UFDestino, new { @class = "form-control", placeholder = "UF De Destino" })
+                </div>
+                <div class="form-group">
+                    <h3>Cep de Destino</h3>
+                    @Html.TextBoxFor(a => a.CepDestino, new { @class = "form-control", placeholder = "Cep de Destino" })
+                </div>
+                <div class="form-group">
+                    <h3>Frete Com Segurança</h3>
+                    @Html.TextBoxFor(a => a.FreteSeguranca, new { @class = "form-control", placeholder = "Frete Com Segurança" })
+                </div>
+                <div class="form-group">
+                    <h3>Outrar informações</h3>
+                    @Html.TextAreaFor(a => a.Compras, new { @class = "form-control", placeholder = "Outras Informações" })
+                </div>
+                <hr />
                 <button type="submit" class="btn btn-primary">Enviar</button>
             </div>
 
